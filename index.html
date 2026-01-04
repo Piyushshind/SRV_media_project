@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Premier Schools Exhibition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Premier Schools Exhibition landing page helping parents discover top schools." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="#" class="site-header__logo"><img src="https://picsum.photos/seed/pse-logo/160/40" alt="Premier Schools Exhibition" /></a>
+
+        <button class="site-header__hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+
+        <nav class="site-header__nav" id="primary-nav" aria-label="Primary navigation">
+          <ul class="site-header__nav-list">
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#hero">Home</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#exhibition">Exhibition</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#choose-school">Schools</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#partner-logos">Partners</a>
+            </li>
+            <li class="site-header__nav-item">
+              <a class="site-header__nav-link" href="#footer-contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+      <!-- Hero Section: Dual-axis slider -->
+      <section id="hero" class="hero" aria-labelledby="hero-heading">
+        <div class="hero__inner">
+          <header class="hero__header">
+            <h1 id="hero-heading" class="hero__title">Discover Premier Schools Near You</h1>
+            <p class="hero__subtitle">Visit the Premier Schools Exhibition and meet top schools under one roof.</p>
+          </header>
+
+          <section class="hero__slider" role="region" aria-roledescription="carousel" aria-label="Premier schools highlights" aria-live="polite">
+            <div class="hero__slider-track" data-horizontal-index="0" data-vertical-index="0">
+              <!-- Horizontal group 1 -->
+              <div class="hero__slider-group" data-group="0">
+                <div class="hero__slider-vertical-track">
+                  <article class="hero__slide" aria-label="Slide 1 of 6">
+                    <img class="hero__slide-image" src="https://picsum.photos/seed/classroom/960/540" alt="Students studying together in a classroom" />
+                    <div class="hero__slide-body">
+                      <h2 class="hero__slide-title">Explore Top CBSE & ICSE Schools</h2>
+                      <p class="hero__slide-text">Discover schools with exceptional academic performance and holistic development.</p>
+                    </div>
+                  </article>
+
+                  <article class="hero__slide" aria-label="Slide 2 of 6">
+                    <img class="hero__slide-image" src="https://picsum.photos/seed/campus/960/540" alt="Modern school campus with green playground" />
+                    <div class="hero__slide-body">
+                      <h2 class="hero__slide-title">Modern Campuses & Infrastructure</h2>
+                      <p class="hero__slide-text">Experience world-class learning spaces, labs, and sports facilities.</p>
+                    </div>
+                  </article>
+
+                  <article class="hero__slide" aria-label="Slide 3 of 6">
+                    <img class="hero__slide-image" src="https://picsum.photos/seed/lab/960/540" alt="Students working in a science laboratory" />
+                    <div class="hero__slide-body">
+                      <h2 class="hero__slide-title">State-of-the-art Labs</h2>
+                      <p class="hero__slide-text">Explore schools with advanced science and computer laboratories.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <!-- Horizontal group 2 -->
+              <div class="hero__slider-group" data-group="1">
+                <div class="hero__slider-vertical-track">
+                  <article class="hero__slide" aria-label="Slide 4 of 6">
+                    <img class="hero__slide-image" src="https://picsum.photos/seed/activities/960/540" alt="Children participating in school activities" />
+                    <div class="hero__slide-body">
+                      <h2 class="hero__slide-title">Holistic Learning Opportunities</h2>
+                      <p class="hero__slide-text">Find schools that balance academics, sports, arts, and life skills.</p>
+                    </div>
+                  </article>
+
+                  <article class="hero__slide" aria-label="Slide 5 of 6">
+                    <img class="hero__slide-image" src="https://picsum.photos/seed/parents/960/540" alt="Parents interacting with school representatives" />
+                    <div class="hero__slide-body">
+                      <h2 class="hero__slide-title">Interact with School Leaders</h2>
+                      <p class="hero__slide-text">Meet principals and admission counselors to clarify all your queries.</p>
+                    </div>
+                  </article>
+
+                  <article class="hero__slide" aria-label="Slide 6 of 6">
+                    <img class="hero__slide-image" src="https://picsum.photos/seed/auditorium/960/540" alt="School auditorium with parents attending a session" />
+                    <div class="hero__slide-body">
+                      <h2 class="hero__slide-title">Parent Information Sessions</h2>
+                      <p class="hero__slide-text">Attend detailed briefings about curriculum, fees, and admission process.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__controls" aria-label="Hero slider controls">
+              <div class="hero__controls-row hero__controls-row--horizontal">
+                <button class="hero__control hero__control--prev-x" type="button"><span class="hero__control-label">Previous group</span></button>
+                <button class="hero__control hero__control--next-x" type="button"><span class="hero__control-label">Next group</span></button>
+              </div>
+              <div class="hero__controls-row hero__controls-row--vertical">
+                <button class="hero__control hero__control--prev-y" type="button"><span class="hero__control-label">Previous slide</span></button>
+                <button class="hero__control hero__control--next-y" type="button"><span class="hero__control-label">Next slide</span></button>
+              </div>
+              <button class="hero__control hero__control--toggle" type="button" aria-pressed="true"><span class="hero__control-label">Pause autoplay</span></button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Participating School Logos: continuous sling -->
+      <section id="partner-logos" class="logos" aria-labelledby="logos-heading">
+        <div class="logos__inner">
+          <h2 id="logos-heading" class="logos__title">Participating Schools</h2>
+          <p class="logos__subtitle">Leading schools from across the country participate in the exhibition.</p>
+
+          <div class="logos__marquee" aria-label="Participating school logos">
+            <!-- Left-to-right row -->
+            <div class="logos__row logos__row--ltr">
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo1/140/40" alt="Greenfield International School" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo2/140/40" alt="Bright Minds Public School" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo3/140/40" alt="Sunrise Global Academy" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo4/140/40" alt="Heritage World School" />
+              </div>
+              <!-- Duplicate for continuous animation -->
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo1b/140/40" alt="Greenfield International School (repeat)" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo2b/140/40" alt="Bright Minds Public School (repeat)" />
+              </div>
+            </div>
+
+            <!-- Right-to-left row -->
+            <div class="logos__row logos__row--rtl">
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo5/140/40" alt="Silver Oak High" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo6/140/40" alt="Riverdale Convent School" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo7/140/40" alt="Starlight International" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo8/140/40" alt="City Scholars Academy" />
+              </div>
+              <!-- Duplicate for continuous animation -->
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo5b/140/40" alt="Silver Oak High (repeat)" />
+              </div>
+              <div class="logos__item">
+                <img src="https://picsum.photos/seed/logo6b/140/40" alt="Riverdale Convent School (repeat)" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Choose the School: cards / mobile slider -->
+      <section id="choose-school" class="choose" aria-labelledby="choose-heading">
+        <div class="choose__inner">
+          <header class="choose__header">
+            <h2 id="choose-heading" class="choose__title">Choose the Right School</h2>
+            <p class="choose__subtitle">Filter by school type and discover the best options for your child.</p>
+          </header>
+
+          <section class="choose__carousel" role="region" aria-roledescription="carousel" aria-label="School types" aria-live="polite">
+            <div class="choose__grid">
+              <article class="choose__card" id="choose-slide-1">
+                <img class="choose__card-image" src="https://picsum.photos/seed/city/480/320" alt="City school building in an urban area" />
+                <h3 class="choose__card-title">City Day Schools</h3>
+                <p class="choose__card-text">Ideal for families seeking strong academics and city convenience.</p>
+                <a href="#" class="choose__card-cta">Explore city schools</a>
+              </article>
+
+              <article class="choose__card" id="choose-slide-2">
+                <img class="choose__card-image" src="https://picsum.photos/seed/residential/480/320" alt="Residential school campus with dormitories" />
+                <h3 class="choose__card-title">Residential Schools</h3>
+                <p class="choose__card-text">Discover boarding schools with safe, structured environments.</p>
+                <a href="#" class="choose__card-cta">Explore residential schools</a>
+              </article>
+
+              <article class="choose__card" id="choose-slide-3">
+                <img class="choose__card-image" src="https://picsum.photos/seed/international/480/320" alt="Students with international flags at a school event" />
+                <h3 class="choose__card-title">International Schools</h3>
+                <p class="choose__card-text">Find IB and Cambridge schools with global curricula.</p>
+                <a href="#" class="choose__card-cta">Explore international schools</a>
+              </article>
+
+              <article class="choose__card" id="choose-slide-4">
+                <img class="choose__card-image" src="https://picsum.photos/seed/activity/480/320" alt="Children playing sports on a school ground" />
+                <h3 class="choose__card-title">Activity-focused Schools</h3>
+                <p class="choose__card-text">Schools that emphasize sports, arts, and co-curricular activities.</p>
+                <a href="#" class="choose__card-cta">Explore activity schools</a>
+              </article>
+            </div>
+
+            <!-- Mobile slider controls (dots) -->
+            <div class="choose__slider-controls">
+              <div class="choose__dots" role="tablist" aria-label="Choose school slides">
+                <button class="choose__dot choose__dot--active" type="button" role="tab" aria-selected="true" aria-controls="choose-slide-1"><span class="visually-hidden">Show city day schools</span></button>
+                <button class="choose__dot" type="button" role="tab" aria-selected="false" aria-controls="choose-slide-2"><span class="visually-hidden">Show residential schools</span></button>
+                <button class="choose__dot" type="button" role="tab" aria-selected="false" aria-controls="choose-slide-3"><span class="visually-hidden">Show international schools</span></button>
+                <button class="choose__dot" type="button" role="tab" aria-selected="false" aria-controls="choose-slide-4"><span class="visually-hidden">Show activity-focused schools</span></button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Exhibition highlights slider -->
+      <section id="exhibition" class="exhibition" aria-labelledby="exhibition-heading">
+        <div class="exhibition__inner">
+          <header class="exhibition__header">
+            <h2 id="exhibition-heading" class="exhibition__title">Exhibition Highlights</h2>
+            <p class="exhibition__subtitle">Experience everything the Premier Schools Exhibition has to offer.</p>
+          </header>
+
+          <section class="exhibition__slider" role="region" aria-roledescription="carousel" aria-label="Exhibition highlights" aria-live="polite">
+            <div class="exhibition__track">
+              <article class="exhibition__card" aria-label="Highlight 1 of 4">
+                <img class="exhibition__card-image" src="https://picsum.photos/seed/event1/640/360" alt="Parents visiting school stalls at an exhibition" />
+                <h3 class="exhibition__card-title">Meet 100+ Schools</h3>
+                <p class="exhibition__card-text">Interact with admission teams from leading schools in a single venue.</p>
+              </article>
+
+              <article class="exhibition__card" aria-label="Highlight 2 of 4">
+                <img class="exhibition__card-image" src="https://picsum.photos/seed/event2/640/360" alt="Admission counseling desk with parents and counselors" />
+                <h3 class="exhibition__card-title">Free Counseling</h3>
+                <p class="exhibition__card-text">Get unbiased guidance from education counselors and experts.</p>
+              </article>
+
+              <article class="exhibition__card" aria-label="Highlight 3 of 4">
+                <img class="exhibition__card-image" src="https://picsum.photos/seed/event3/640/360" alt="Children taking part in a fun workshop" />
+                <h3 class="exhibition__card-title">Interactive Workshops</h3>
+                <p class="exhibition__card-text">Attend sessions on school readiness, parenting, and future careers.</p>
+              </article>
+
+              <article class="exhibition__card" aria-label="Highlight 4 of 4">
+                <img class="exhibition__card-image" src="https://picsum.photos/seed/event4/640/360" alt="Stage with an award ceremony at the exhibition" />
+                <h3 class="exhibition__card-title">Live Engagements</h3>
+                <p class="exhibition__card-text">Enjoy competitions, performances, and special activities for families.</p>
+              </article>
+            </div>
+
+            <div class="exhibition__controls" aria-label="Exhibition slider controls">
+              <button class="exhibition__control exhibition__control--prev" type="button"><span class="visually-hidden">Previous highlight</span></button>
+              <button class="exhibition__control exhibition__control--next" type="button"><span class="visually-hidden">Next highlight</span></button>
+              <button class="exhibition__control exhibition__control--toggle" type="button" aria-pressed="false"><span class="visually-hidden">Start autoplay</span></button>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer-contact">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <img src="https://picsum.photos/seed/footer-logo/140/40" alt="Premier Schools Exhibition logo" />
+          <p class="site-footer__tagline">Helping parents make informed school decisions.</p>
+        </div>
+        <div class="site-footer__info">
+          <p class="site-footer__text">For exhibition dates, venues, and registrations, please visit our official website or contact our support team.</p>
+          <p class="site-footer__text">
+            Email: <a href="mailto:info@example.com">info@example.com</a> · Phone: <a href="tel:+911234567890">+91 12345 67890</a>
+          </p>
+        </div>
+        <p class="site-footer__copy">&copy; 2026 Premier Schools Exhibition. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
