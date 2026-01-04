@@ -1,6 +1,4 @@
-/* ================================
-   Base Reset & Typography
-================================ */
+
 
 *,
 *::before,
@@ -21,13 +19,11 @@ body {
   background-color: #ffffff;
 }
 
-/* Accessible focus outline (WCAG 2.2 focus-appearance) */
 :focus-visible {
   outline: 3px solid #2563eb;
   outline-offset: 3px;
 }
 
-/* Skip link */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -44,7 +40,6 @@ body {
   left: 0.5rem;
 }
 
-/* Utility class for screen-reader-only text */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -57,9 +52,6 @@ body {
   border: 0;
 }
 
-/* ================================
-   Global Layout
-================================ */
 
 .site-header,
 .site-footer,
@@ -80,9 +72,7 @@ body {
   margin-inline: auto;
 }
 
-/* ================================
-   Header
-================================ */
+
 
 .site-header {
   border-bottom: 1px solid #e5e7eb;
@@ -120,7 +110,7 @@ body {
   font-size: 0.95rem;
   padding: 0.5rem 0.75rem;
   border-radius: 999px;
-  min-width: 2.5rem; /* helps target size */
+  min-width: 2.5rem;
   min-height: 2.5rem;
   display: inline-flex;
   align-items: center;
@@ -131,9 +121,7 @@ body {
   background-color: #f3f4f6;
 }
 
-/* ================================
-   Hero section
-================================ */
+
 
 .hero {
   background: radial-gradient(circle at top left, #eff6ff 0, #ffffff 55%);
@@ -158,7 +146,6 @@ body {
   font-size: 1rem;
 }
 
-/* Slider container */
 .hero__slider {
   position: relative;
   overflow: hidden;
@@ -166,17 +153,14 @@ body {
   border-radius: 1.5rem;
   border: 1px solid #e5e7eb;
   background-color: #ffffff;
-  /* height: clamp(420px, 60vh, 620px); */
 }
 
-/* Horizontal track */
 .hero__slider-track {
   display: flex;
   width: 100%;
   transition: transform 500ms ease-out;
 }
 
-/* Horizontal groups (columns) */
 .hero__slider-group {
   min-width: 100%;
   display: flex;
@@ -235,7 +219,6 @@ body {
   font-size: 0.97rem;
 }
 
-/* Hero controls */
 .hero__controls {
   display: flex;
   flex-wrap: wrap;
@@ -250,7 +233,7 @@ body {
 }
 
 .hero__control {
-  min-width: 2.5rem; /* WCAG 2.2 24x24 target size */
+  min-width: 2.5rem; 
   min-height: 2.5rem;
   border-radius: 999px;
   border: 1px solid #e5e7eb;
@@ -273,9 +256,6 @@ body {
   white-space: nowrap;
 }
 
-/* ================================
-   Participating Logos marquee
-================================ */
 
 .logos {
   background-color: #f9fafb;
@@ -313,7 +293,6 @@ body {
   opacity: 0.9;
 }
 
-/* Continuous sling animation */
 @keyframes logos-ltr {
   0% {
     transform: translateX(0);
@@ -340,16 +319,13 @@ body {
   animation: logos-rtl 30s linear infinite;
 }
 
-/* Pause marquee on hover/focus (JS toggles class on container as well) */
 .logos__marquee:hover .logos__row,
 .logos__marquee:focus-within .logos__row,
 .logos__marquee--paused .logos__row {
   animation-play-state: paused;
 }
 
-/* ================================
-   Choose the School section
-================================ */
+
 
 .choose {
   padding-block: 3rem;
@@ -375,7 +351,6 @@ body {
   position: relative;
 }
 
-/* Grid: desktop/tablet */
 .choose__grid {
   display: grid;
   gap: 1.5rem;
@@ -430,7 +405,6 @@ body {
   color: #ffffff;
 }
 
-/* Dots (used on mobile) */
 .choose__slider-controls {
   margin-top: 1.5rem;
   display: flex;
@@ -457,9 +431,6 @@ body {
   border-color: #111827;
 }
 
-/* ================================
-   Exhibition section
-================================ */
 
 .exhibition {
   padding-block: 3rem;
@@ -491,14 +462,12 @@ body {
   padding: 1rem 0 1.5rem;
 }
 
-/* Horizontal track */
 .exhibition__track {
   display: flex;
   gap: 1.5rem;
   transition: transform 500ms ease-out;
 }
 
-/* Individual cards - consistent height */
 .exhibition__card {
   min-width: 100%;
   padding: 1.5rem;
@@ -527,7 +496,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Exhibition controls */
 .exhibition__controls {
   display: flex;
   gap: 0.5rem;
@@ -549,9 +517,6 @@ body {
   border-color: #bfdbfe;
 }
 
-/* ================================
-   Footer
-================================ */
 
 .site-footer {
   border-top: 1px solid #e5e7eb;
@@ -594,11 +559,6 @@ body {
   color: #9ca3af;
 }
 
-/* ================================
-   Responsive Layout
-================================ */
-
-/* Small screens default (1-col) already set */
 
 @media (min-width: 640px) {
   .hero__slide {
@@ -627,9 +587,7 @@ body {
   }
 }
 
-/* ================================
-   Motion preferences (WCAG C39)
-================================ */
+
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -651,9 +609,8 @@ body {
   }
 }
 
-/* Hamburger menu styles */
 .site-header__hamburger {
-  display: none; /* hidden on desktop */
+  display: none;
   flex-direction: column;
   gap: 0.2rem;
   background: none;
@@ -673,13 +630,11 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Mobile navbar */
 @media (max-width: 768px) {
   .site-header__hamburger {
     display: flex;
   }
 
-  /* Hide nav list by default */
   .site-header__nav-list {
     display: none;
     flex-direction: column;
@@ -694,12 +649,10 @@ body {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
-  /* Show nav list when hamburger is active */
   .site-header__nav-list--open {
     display: flex;
   }
 
-  /* Hamburger animation to X */
   .site-header__hamburger[aria-expanded="true"] .hamburger__line:nth-child(1) {
     transform: rotate(45deg) translate(0.3rem, 0.3rem);
   }
@@ -712,7 +665,6 @@ body {
     transform: rotate(-45deg) translate(0.3rem, -0.3rem);
   }
 
-  /* Nav links stack vertically */
   .site-header__nav-item {
     width: 100%;
   }
@@ -729,7 +681,6 @@ body {
   }
 }
 
-/* Tablet: show horizontal nav but smaller */
 @media (min-width: 769px) and (max-width: 1024px) {
   .site-header__nav-list {
     gap: 0.5rem;

@@ -1,12 +1,8 @@
-// scripts.js
 
 (function () {
   const prefersReducedMotion = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ----------------------------------------------------
-   * Utility: add basic swipe support
-   * -------------------------------------------------- */
   function addSwipeNavigation({ container, onSwipeLeft, onSwipeRight, threshold = 40 }) {
     let startX = 0;
     let endX = 0;
@@ -30,9 +26,7 @@
     });
   }
 
-  /* ----------------------------------------------------
-   * HERO: Dual-axis slider
-   * -------------------------------------------------- */
+ 
   function initHeroSlider() {
     const hero = document.querySelector('.hero__slider');
     if (!hero) return;
@@ -160,7 +154,6 @@
       hero.setAttribute('aria-live', 'polite');
     }
 
-    // Button events
     if (nextXBtn) nextXBtn.addEventListener('click', () => {
       stopAutoplay();
       nextHorizontal();
@@ -188,7 +181,6 @@
       });
     }
 
-    // Keyboard navigation: arrow keys
     hero.addEventListener('keydown', (event) => {
       const key = event.key;
       if (key === 'ArrowRight') {
@@ -210,20 +202,17 @@
       }
     });
 
-    // Pause on hover / focus
     ['mouseenter', 'focusin', 'touchstart'].forEach((eventName) => {
       hero.addEventListener(eventName, stopAutoplay);
     });
     ['mouseleave', 'focusout'].forEach((eventName) => {
       hero.addEventListener(eventName, () => {
-        // only resume if not prefersReducedMotion
         if (!prefersReducedMotion) {
           startAutoplay();
         }
       });
     });
 
-    // Swipe left/right changes horizontal groups
     addSwipeNavigation({
       container: hero,
       onSwipeLeft: () => {
@@ -236,7 +225,6 @@
       }
     });
 
-    // Init
     goTo(0, 0);
     if (!prefersReducedMotion) {
       startAutoplay();
@@ -245,9 +233,7 @@
     }
   }
 
-  /* ----------------------------------------------------
-   * Logos: pause marquee animation on hover/focus
-   * -------------------------------------------------- */
+
   function initLogosMarquee() {
     const marquee = document.querySelector('.logos__marquee');
     if (!marquee) return;
@@ -266,9 +252,6 @@
     marquee.addEventListener('focusout', resume);
   }
 
-  /* ----------------------------------------------------
-   * Choose the School: mobile slider with dots + swipe
-   * -------------------------------------------------- */
   function initChooseSlider() {
     const carousel = document.querySelector('.choose__carousel');
     if (!carousel) return;
@@ -306,7 +289,6 @@
       updateSlides();
     }
 
-    // Dot click
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         goTo(index);
@@ -328,22 +310,18 @@
       });
     });
 
-    // Swipe: left/right moves between card indexes
     addSwipeNavigation({
       container: carousel,
       onSwipeLeft: () => goTo(activeIndex + 1),
       onSwipeRight: () => goTo(activeIndex - 1)
     });
 
-    // Desktop: show all four cards (handled by CSS).
-    // JS only enforces single-card on narrow view.
+
     function handleResize() {
       const isMobile = window.matchMedia('(max-width: 767px)').matches;
       if (isMobile) {
-        // single visible card
         goTo(activeIndex);
       } else {
-        // show all, reset attributes
         cards.forEach((card) => {
           card.removeAttribute('hidden');
           card.setAttribute('aria-hidden', 'false');
@@ -361,9 +339,7 @@
     handleResize();
   }
 
-  /* ----------------------------------------------------
-   * Exhibition slider: prev/next + optional autoplay
-   * -------------------------------------------------- */
+
   function initExhibitionSlider() {
     const slider = document.querySelector('.exhibition__slider');
     if (!slider) return;
@@ -379,7 +355,7 @@
     let currentIndex = 0;
     let autoplayInterval = null;
     const autoplayDelay = 6000;
-    let isPlaying = false && !prefersReducedMotion; // default off, user can start
+    let isPlaying = false && !prefersReducedMotion; 
 
     function updateTrack() {
       const xPercent = -currentIndex * 100;
@@ -456,7 +432,6 @@
       });
     }
 
-    // Keyboard navigation
     slider.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowRight') {
         event.preventDefault();
@@ -469,7 +444,6 @@
       }
     });
 
-    // Pause on hover / focus / touch
     ['mouseenter', 'focusin', 'touchstart'].forEach((eventName) => {
       slider.addEventListener(eventName, stopAutoplay);
     });
@@ -481,7 +455,6 @@
       });
     });
 
-    // Swipe
     addSwipeNavigation({
       container: slider,
       onSwipeLeft: () => {
@@ -495,10 +468,8 @@
     });
 
     goTo(0);
-    // autoplay is optional and off by default
   }
 
-  // Mobile hamburger menu toggle
   function initMobileNav() {
     const hamburger = document.querySelector('.site-header__hamburger');
     const navList = document.querySelector('.site-header__nav-list');
@@ -511,7 +482,6 @@
       navList.classList.toggle('site-header__nav-list--open');
     });
 
-    // Close menu when clicking a link
     const navLinks = navList.querySelectorAll('.site-header__nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
